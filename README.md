@@ -46,6 +46,16 @@ Kresling 锥形折纸（KCO）是一种**三稳态**折纸结构，其力-位移
 几何参数（Table 1）：`l = 35 mm, rₐ = 2/3, num = 6, α = 38°, β = 45°`；
 三稳态高度：7.9 / 23.3 / 29.2 mm。
 
+<p align="center">
+  <img src="figures/fig1_design_fabrication_testing.png" alt="Fig.1 KCO design, fabrication and testing" width="80%"/>
+</p>
+<p align="center"><b>Fig. 1</b> Design, fabrication and testing of the Kresling conical origami (KCO). / KCO 的设计、制备与实验。</p>
+
+<p align="center">
+  <img src="figures/fig2_force_displacement_fit.png" alt="Fig.2 Force-displacement relationship" width="50%"/>
+</p>
+<p align="center"><b>Fig. 2</b> Fitted curve and experimental data of the force-displacement relationship. / 力-位移关系拟合曲线与实验数据。</p>
+
 ---
 
 ## Methodology / 方法（对应代码）
@@ -61,6 +71,11 @@ Kresling 锥形折纸（KCO）是一种**三稳态**折纸结构，其力-位移
 4. **最小二乘求解**：化为 `X·θ = F`，`θ = (XᵀX)⁻¹XᵀF`（Eq. 15–17）。
 5. **梯度下降更新非光滑点**：对非光滑点 d₁/d₂ 求梯度并更新，直至收敛。 → `d1_phi*/d2_phi*.m`
 
+<p align="center">
+  <img src="figures/fig3_identification_algorithm.png" alt="Fig.3 Parameter identification algorithm" width="80%"/>
+</p>
+<p align="center"><b>Fig. 3</b> Parameter identification algorithm and dynamic system of the KCO. / KCO 参数辨识算法与动力学系统。</p>
+
 ---
 
 ## Repository structure / 文件说明
@@ -75,6 +90,15 @@ Kresling-Conical-Origami-Dynamics/
 ├── d1_phi1.m / d1_phi2.m / d1_phi3.m # ϕ 对 d₁ 的偏导（更新 d₁ 用）
 ├── d2_phi1.m / d2_phi2.m / d2_phi3.m # ϕ 对 d₂ 的偏导（更新 d₂ 用）
 ├── data6.mat                         # 辨识实验数据（列：时间 / 位移 x / 速度 dx）
+├── figures/
+│   ├── fig1_design_fabrication_testing.png  # Fig.1
+│   ├── fig2_force_displacement_fit.png      # Fig.2
+│   ├── fig3_identification_algorithm.png    # Fig.3
+│   ├── fig4_identification_accuracy.png     # Fig.4
+│   ├── fig5_bifurcation_diagrams.png          # Fig.5
+│   ├── fig6_chaos_analysis_p5.png             # Fig.6
+│   ├── fig7_basins_of_attraction.png        # Fig.7
+│   └── figA1_penalty_bifurcation.png        # Fig.A1
 ├── papers/
 │   └── DRAFT-CND-25-1238-1.pdf       # 论文全文
 ├── README.md
@@ -109,6 +133,33 @@ kco_piecewise_identification
 - 在 **9 Hz** 外激励下，随振幅增大依次出现：周期内振动 → 跨阱振动 → **混沌**
   （P5，振幅 3.864 mm；Poincaré 截面稠密点 + FFT 连续谱证实混沌）。
 - 吸引域（basin of attraction）分析揭示不同响应随初值演化的规律与触发概率。
+
+<p align="center">
+  <img src="figures/fig4_identification_accuracy.png" alt="Fig.4 Identification accuracy" width="80%"/>
+</p>
+<p align="center"><b>Fig. 4</b> Accuracy of dynamic simulations based on identified parameters: (a) displacement, (b) velocity. / 基于辨识参数的动态仿真精度：(a) 位移，(b) 速度。</p>
+
+<p align="center">
+  <img src="figures/fig5_bifurcation_diagrams.png" alt="Fig.5 Bifurcation diagrams" width="80%"/>
+</p>
+<p align="center"><b>Fig. 5</b> Bifurcation diagrams under excitation frequencies (a) 6 Hz, (b) 9 Hz, (c) 12 Hz, (d) 18 Hz, and phase portraits (e). / 不同激励频率下的分岔图 (a–d) 与相图 (e)。</p>
+
+<p align="center">
+  <img src="figures/fig6_chaos_analysis_p5.png" alt="Fig.6 Chaos analysis at P5" width="80%"/>
+</p>
+<p align="center"><b>Fig. 6</b> Chaos analysis of the dynamic response at point P5: (a) Poincaré section, (b) FFT spectrum. / P5 点混沌响应分析：(a) Poincaré 截面，(b) FFT 频谱。</p>
+
+<p align="center">
+  <img src="figures/fig7_basins_of_attraction.png" alt="Fig.7 Basins of attraction" width="80%"/>
+</p>
+<p align="center"><b>Fig. 7</b> Basins of attraction on the displacement-velocity plane corresponding to 6 excitation amplitudes. / 6 种激励振幅下位移-速度平面上的吸引域。</p>
+
+## Appendix / 附录
+
+<p align="center">
+  <img src="figures/figA1_penalty_bifurcation.png" alt="Fig.A1 Penalty bifurcation" width="40%"/>
+</p>
+<p align="center"><b>Fig. A1</b> Bifurcation diagrams of the KCO structure for three different penalty values. / 三种惩罚值下的分岔图。</p>
 
 ---
 
