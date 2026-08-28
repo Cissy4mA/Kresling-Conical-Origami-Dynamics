@@ -15,9 +15,8 @@ Xinyue Xiang, and XX\*
 *(Draft / preprint — manuscript ID: CND-25-1238)*
 
 - 🖼️ **在线阅读（逐页图片，GitHub 可直接预览）**：[`paper.md`](paper.md)
-- 📄 Full text (PDF，供下载): [`papers/DRAFT-CND-25-1238-1.pdf`](papers/DRAFT-CND-25-1238-1.pdf)
 
-> GitHub 的 PDF 在线预览对本文原文件兼容性不佳，故已将 21 页全文转为图片置于 [`paper_pages/`](paper_pages)，并在 [`paper.md`](paper.md) 中按顺序展示，确保可直接阅读。
+> 论文全文已转为 21 页图片置于 [`paper_pages/`](paper_pages)，并在 [`paper.md`](paper.md) 中按顺序展示，确保可直接在 GitHub 阅读。
 
 ### Abstract
 
@@ -102,8 +101,6 @@ Kresling-Conical-Origami-Dynamics/
 │   ├── fig6_chaos_analysis_p5.png             # Fig.6
 │   ├── fig7_basins_of_attraction.png        # Fig.7
 │   └── figA1_penalty_bifurcation.png        # Fig.A1
-├── papers/
-│   └── DRAFT-CND-25-1238-1.pdf       # 论文全文（PDF，供下载）
 ├── paper_pages/                       # 论文逐页图片（21 页，GitHub 可直接预览）
 │   ├── page_01.png … page_21.png
 ├── paper.md                           # 论文全文在线阅读入口（图片版）
