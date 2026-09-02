@@ -10,8 +10,7 @@
 ## Paper / 论文
 
 **The modeling and dynamic analysis of the Kresling Conical Origami**
-Xinyue Xiang, and XX\*
-*Institute of Mathematics, Shanghai Maritime University, Haigang Ave 1550, Shanghai 201306, China*
+
 *(Draft / preprint — manuscript ID: CND-25-1238)*
 
 - 🖼️ **在线阅读（逐页图片，GitHub 可直接预览）**：[`paper.md`](paper.md)
@@ -169,11 +168,10 @@ kco_piecewise_identification
 ## Citation / 引用
 
 ```bibtex
-@misc{xiang2025modeling,
+@misc{kco2025modeling,
   title  = {The modeling and dynamic analysis of the Kresling Conical Origami},
-  author = {Xiang, Xinyue and others},
   year   = {2025},
-  note   = {Preprint / draft, manuscript ID CND-25-1238, Shanghai Maritime University}
+  note   = {Preprint / draft, manuscript ID CND-25-1238}
 }
 ```
 
